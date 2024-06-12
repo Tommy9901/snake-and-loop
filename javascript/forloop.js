@@ -44,12 +44,12 @@
 //     }
 // }console.log(total)
 
-// let total = 0;
-// for (let n = 10; n < 20; n++){
-//     if(n %2 === 0) {
-//         total = total + n
-//     }
-// }console.log(total)
+let total = 0;
+for (let n = 10; n < 20; n++){
+    if(n %2 === 0) {
+        total = total + n
+    }
+}console.log(total)
 
 
 // 10n utga shalgah tul toostoolol n baga bolno

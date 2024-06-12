@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+</head>
+<body>
+    <main>
+        <input id="n_input" placeholder="Enter n values..."/>
+        <input id="m_input" placeholder="Enter m values..."/>
+        <button onclick="run()">solve</button>
+        <pre>
+              <code id="output"></code>
+          </pre>
+    </main>
+    <script>
+        function run(){
+            const n = getNumberValueFrominput("n_input");
+            const m = getNumberValueFrominput("m_input");
+
+            const sum = sumOfNumbers(n, m);
+            printOutput(sum);
+        }
+      // n-ees m hurtelh toonuudiin tegsh toonii niilberiig ol?
+        // 1st
+        function sumOfNumbers(n, m) {
+            let total = 0;
+            for (let n = 0; n < m; n++){
+            if(n %2 === 0) {
+            total = total + n
+        }
+            }return(total)
+        }
+  
+        function getNumberValueFrominput(inputId){
+            const inputString = document.getElementById(inputId).value;
+            const n = Number(inputString);
+            return n;
+        }
+
+        
+
+        function printOutput(output){
+            document.getElementById("output").innerText = output;
+        }
+
+
+        // urjihiin hurd
+        /* function multiTable(n   ){ 
+            let result = "";
+
+            for (let k = 1; k <= n; k++){
+                for(let i = 1; i <= n; i++){
+                    const value = String(i * k);
+                    result += value.padStart(3, " ") + " ";
+                }
+                result = result + "\n";
+            }
+            return result;
+        }*/ 
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+  </head>
+  <body>
+    <main>
+      <button onclick="console.log(sumOfNumbers(10, 20));">Restart</button>
+      <pre>
+            <code id="output"></code>
+        </pre>
+    </main>
+    <!-- 2 turliin function bna -->
+    <script>
+    // n-ees m hurtelh toonuudiin tegsh toonii niilberiig ol?
+      // 1st
+      function sumOfNumbers() {
+        const n = Number(prompt("N too oruulna uu"))
+        const m = Number(prompt("M too oruulna uu"))
+        let total = 0;
+        for (let n = 10; n < m; n++) {
+          if (n % 2 === 0) {
+            total = total + n;
+          }
+        }
+        alert (total);
+      }
+
+      // sumOfNumbers(10);
+      // sumOfNumbers(30);
+      // sumOfNumbers(60);
+      // 2th
+      function sumTwoNumbers(a, b) {
+        const sum = a + b;
+        console.log(sum);
+      }
+
+      // sumTwoNumbers( 3, 9)
+
+      // const sumof3to9 = sumOfNumbers(3, 9)
+
+      // consol.log(sumOfNumbers(3, 9))
+      // alert(3, 9)
+      // document.getElementById('output').innerText = sumof3to9;
+
+      //  Doorh 2 davtaltiig function ashiglan uzuulev
+      // let sum = 0 ;
+      // for( let i = 1; i <= 10; i++){
+      //     sum = sum + i;
+      // }
+      // console.log(sum);
+
+      // let sum2 = 0 ;
+      // for( let i = 1; i <= 20; i++){
+      //     sum2 = sum2 + i;
+      // }
+      // console.log(sum2);
+    </script>
+  </body>
+</html>
