@@ -15,33 +15,35 @@
           </pre>
     </main>
     <script>
-        function run(){
-            const n = getNumberValueFrominput();
-            const sum = multiTable(n);
-            printOutput(sum);
-        }
-      // n-ees m hurtelh toonuudiin tegsh toonii niilberiig ol?
-        // 1st
-        // function sumOfNumbers(n, m) {
-        //     let total = 0;
-        //     for (let n = 0; n < m; n++){
-        //     if(n %2 === 0) {
-        //     total = total + n
-        // }
-        //     }return(total)
-        // }
         function multiTable(n){
+            const n = getNumberValueFrominput();
+            const output = multiTable(n);
+            print(output);
+        }
+      
+
+        function solution(n){
             let result = "";
 
-            for (let k = 1; k <= n; k++){
-                for(let i = 1; i <= n; i++){
-                    const value = String(i, k);
-                }
-                }
+            for (let k = 1; i <= n; i++){
+                result = result + generateStars(i)
+                result = result + '\n';
+            }
                 return result;
-                }
-            // result = result + "\n"; result += value.padStart(3, " ") + " ";
-  
+        }
+
+            
+        
+
+        function generateStars(NumberofStars){
+            let stars = "";
+            for (let i = 0; i < NumberofStars; i++){
+                stars = stars + "* ";
+            }
+            return stars;
+        }
+
+
         function getNumberValueFrominput(){
             const inputString = document.getElementById("input").value;
             const n = Number(inputString);
@@ -50,7 +52,7 @@
 
         
 
-        function printOutput(output){
+        function print(output){
             document.getElementById("output").innerText = output;
         }
     </script>

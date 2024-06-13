@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- array -->
+     
+    <script>
+    let arrayOfNumbers = [43, 56, 23, 89, 88, 90, 99, 652, 15, 290,11]
+    // Дээрх array доторх тоонуудын нийлбэрийг ол.
+
+    let total = 0;
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+        const Number = arrayOfNumbers[i];
+        total = total + arrayOfNumbers[i];
+    }
+    console.log(total);
+
+    // Дээрх аrray - ийн хамгийн их тоог ол.
+    let maxiumNumber = Math.max(...arrayOfNumbers);
+    console.log(maxiumNumber);
+
+    // Дээрх аrray - ийн хамгийн бага тоог ол.
+    let minimumNumber = Math.min(...arrayOfNumbers);
+    console.log(minimumNumber);
+
+    // Дээрх аrray - ийн эхэнд дурын 1 тоог нэм, Дээрх аrray - ийн төгсгөлд дурын 1 тоог нэм.
+    arrayOfNumbers.unshift("1");
+    arrayOfNumbers.push("2");
+    console.log(arrayOfNumbers)
+
+    // Дээрх array доторх тоонуудын тэгш болон сондгой тоо тус тус хэд байгааг ол.
+    for(i = 0; i < arrayOfNumbers; i++){
+        evenNumber = arrayOfNumbers.filter( i % 2 == 0);
+        }
+     alert("evenNumber" , evenNumber);
+        // const oddNumber = arrayOfNumbers.filter(Number => Number %2 !== 0);
+        // console.log("oddNumber", oddNumber);
+
+    // 2. studentAges гэсэн хувьсагч зарлаад 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 гэсэн утгуудыг оноож тус array-д байгаа бүх тоог 5-аар нэмэгдүүл.
+    let studentAges = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    let add = 5;
+    for (let i = 0; i < studentAges.length; i++ ){
+        studentAges[i] += add;      
+    }
+    console.log(studentAges)
+
+    // 3. Ангийнхаа хамгийн урт нэртэй хүний нэрийг харуул.
+    
+
+    
+    </script>
+</body>
+</html>
