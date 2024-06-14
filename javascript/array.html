@@ -12,46 +12,110 @@
     let arrayOfNumbers = [43, 56, 23, 89, 88, 90, 99, 652, 15, 290,11]
     // Дээрх array доторх тоонуудын нийлбэрийг ол.
 
-    let total = 0;
-    for (let i = 0; i < arrayOfNumbers.length; i++) {
-        const Number = arrayOfNumbers[i];
-        total = total + arrayOfNumbers[i];
-    }
-    console.log(total);
+        let total = 0;
+        for (let i = 0; i < arrayOfNumbers.length; i++) {
+            const Number = arrayOfNumbers[i];
+            total = total + arrayOfNumbers[i];
+        }
+        console.log("total: ", total);
 
     // Дээрх аrray - ийн хамгийн их тоог ол.
-    let maxiumNumber = Math.max(...arrayOfNumbers);
-    console.log(maxiumNumber);
+        let maxiumNumber = Math.max(...arrayOfNumbers);
+        console.log("The maximium number is: ", maxiumNumber);
+
+
+        let max = arrayOfNumbers[0];
+        for ( let i = 0; i < arrayOfNumbers.length; i++){
+            if(arrayOfNumbers[i] > max){
+                max = arrayOfNumbers[i];
+            }
+        }
+        console.log("The biggest number is:", max)
+
 
     // Дээрх аrray - ийн хамгийн бага тоог ол.
     let minimumNumber = Math.min(...arrayOfNumbers);
-    console.log(minimumNumber);
+    console.log("The minimum number is:", minimumNumber);
 
-    // Дээрх аrray - ийн эхэнд дурын 1 тоог нэм, Дээрх аrray - ийн төгсгөлд дурын 1 тоог нэм.
-    arrayOfNumbers.unshift("1");
-    arrayOfNumbers.push("2");
-    console.log(arrayOfNumbers)
+    // Дээрх аrray - ийн эхэнд болон төгсгөлд дурын 1 тоог нэм.
+        arrayOfNumbers.unshift("1");
+        arrayOfNumbers.push("2");
+        console.log("add:(first and last): ", arrayOfNumbers)
 
     // Дээрх array доторх тоонуудын тэгш болон сондгой тоо тус тус хэд байгааг ол.
-    for(i = 0; i < arrayOfNumbers; i++){
-        evenNumber = arrayOfNumbers.filter( i % 2 == 0);
+        const evenNumber = arrayOfNumbers.filter(Number => Number % 2 == 0);
+        const oddNumber = arrayOfNumbers.filter(Number => Number %2 !== 0);
+        console.log("evenNumber: ", evenNumber);
+        console.log("oddNumber: ", oddNumber);
+
+
+        let evenNumbers = 0;
+        let oddNumbers = 0;
+        for (let i = 0; i < arrayOfNumbers.length; i++){
+            if(arrayOfNumbers[i] % 2 === 0){
+                evenNumbers++;
+            } else {
+                oddNumbers++;
+            }
         }
-     alert("evenNumber" , evenNumber);
-        // const oddNumber = arrayOfNumbers.filter(Number => Number %2 !== 0);
-        // console.log("oddNumber", oddNumber);
+        console.log("The number of even is: ", evenNumbers)
+        console.log("The number of odd is: ", oddNumbers)
+
 
     // 2. studentAges гэсэн хувьсагч зарлаад 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 гэсэн утгуудыг оноож тус array-д байгаа бүх тоог 5-аар нэмэгдүүл.
-    let studentAges = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-    let add = 5;
-    for (let i = 0; i < studentAges.length; i++ ){
-        studentAges[i] += add;      
-    }
-    console.log(studentAges)
+        const studentAges = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+        let add = 5;
+        for (let i = 0; i < studentAges.length; i++ ){
+            studentAges[i] += add;      
+        }
+        console.log("add:5", studentAges)
 
     // 3. Ангийнхаа хамгийн урт нэртэй хүний нэрийг харуул.
-    
+    const classmates = ["galt", "oyundolgor", "jerry", "buyna", "tserennadmid", "tsenguun", "tommy"]
+    let maxiumName = classmates[0];
+    for( let i = 0; i < classmates.length; i++){
+        if(classmates[i].length > maxiumName.length){
+            maxiumName = classmates[i];
+        }
+    }
+    console.log("The longest name is: " , maxiumName)
 
-    
+
+    // 1. fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21
+    function fibonacci(n){
+        let sequence = [0, 1];
+
+        for (let i = 2; i < n; i++){
+            sequence[i] = sequence[i - 1] + sequence[i - 2];
+            // sequence.push(sequence[i - 1] + sequence[i - 2])
+        }
+        return sequence;
+    }
+    console.log(fibonacci (20));
+        // const n = 5;
+        // const sequence = fibonacci(n);
+
+
+    /* 2. Pascal traingle:
+       1
+       1 1
+       1 2 1
+       1 3 3 1
+       1 4 6 4 1*/ 
+       function pascalTraingle(rows){
+        const traingle = [];
+
+        for(let i = 0; i < rows; i++){
+            traingle[i] = new Array(i + 1).fill(1);
+
+            for(let k = 1; k < i; k++) {
+                traingle[i][k] = traingle.pad[i - 1][k - 1] + traingle[i - 1][k];
+            }
+        }
+        return traingle;
+       }
+
+       console.log(pascalTraingle(10));
     </script>
 </body>
 </html>
