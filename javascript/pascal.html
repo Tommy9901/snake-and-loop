@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     function pascalTraingle(rows){
+    //     const traingle = [];
+
+    //     for(let i = 0; i < rows; i++){
+    //         traingle[i] = new Array(i + 1).fill(1);
+
+    //         for(let k = 1; k < i; k++) {
+    //             traingle[i][k] = traingle[i - 1][k - 1] + traingle[i - 1][k];
+    //         }
+    //     }
+    //     return traingle;
+    //    }
+    //    console.log(pascalTraingle(10));
+
+
+
+
+
+    // --------> fibonacci <----------
+        // function fibonacci(n){
+        //     const list = [];
+
+        //     for(let i = 0; i < n; i++){
+        //         if(i === 0){
+        //             list.push(0);
+        //         }else if(i === 1){
+        //             list.push(1);
+        //         }else{
+        //             const newItem = list[i - 1] + list[i - 2];
+        //             list.push(newItem)
+        //         }
+        //     }
+        //     return list;
+        // }
+
+        // console.log(fibonacci(10));
+        // ---> fibonacci end <---
+
+        function pascal(n){
+            let output = "";
+            let currentLine = [];
+            let prevLine = [];
+
+            for(let i = 0; i < n; i++){
+                currentLine = [];
+                for(let j = 0; j < i + 1; j++){
+                    if(j === 0 || j === 1){
+                        currentLine.push(1);
+                    } else{
+                        currentLine.push(prevLine[j] + prevLine[j - 1]);
+                    }
+                }
+                prevLine = currentLine;
+                output += currentLine.join(" ");
+                output += "\n";
+            }
+            return output;
+        }
+
+        console.log(pascal(10));
+
+
+    </script>
+</body>
+</html>

@@ -87,7 +87,7 @@
 
         for (let i = 2; i < n; i++){
             sequence[i] = sequence[i - 1] + sequence[i - 2];
-            // sequence.push(sequence[i - 1] + sequence[i - 2])
+            // sequence.push(sequence[i - 1] + sequence[i - 2])   --> 
         }
         return sequence;
     }
@@ -102,20 +102,36 @@
        1 2 1
        1 3 3 1
        1 4 6 4 1*/ 
+
        function pascalTraingle(rows){
         const traingle = [];
+        const prevLine = [];
 
         for(let i = 0; i < rows; i++){
             traingle[i] = new Array(i + 1).fill(1);
 
             for(let k = 1; k < i; k++) {
-                traingle[i][k] = traingle.pad[i - 1][k - 1] + traingle[i - 1][k];
+                traingle[i][k] = traingle[i - 1][k - 1] + traingle[i - 1][k];
             }
+
         }
         return traingle;
        }
+       console.log(pascalTraingle(20));
 
-       console.log(pascalTraingle(10));
+        // Function to print a line of underscores
+        // function printUnderline(str) {
+        //     console.log('-'.repeat(str.length));
+        // }
+ 
+    // Print an underline after each line of Pascal's Triangle
+    // let triangleOutput = PascalsTriangle(5).trim().split('\n');
+    // for (let line of triangleOutput) {
+    //     console.log(line);
+    //     printUnderline(line);
+    // }
+        
+
     </script>
 </body>
 </html>
