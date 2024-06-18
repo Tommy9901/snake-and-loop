@@ -1,0 +1,36 @@
+*{
+    margin: auto;
+}
+
+
+body{
+    
+    
+}
+.card{
+}
+.card-content{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.card-content-icons{
+    display: flex;
+    gap: 10px;
+}
+
+.input{
+    width: 500px;
+    height: 40px;
+    border-radius: 30px;
+    margin-left: 80px;
+}
+.title{
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.button{
+    margin-left: 250px;
+}

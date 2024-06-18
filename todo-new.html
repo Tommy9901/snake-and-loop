@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link rel="stylesheet" href="todo-new.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        </style>
+</head>
+<body>
+    <!-- ToDo list:
+    1. text deer utga oruulaad submit darah uyd list hesegruu hevle
+    2. delete icon deer darahad list hesgees ustah
+    3. 0/6 data baidlaar uurchlugduh
+    4. 
+     -->
+    <!-- input -->
+    
+
+    <!-- js -->
+     <script>
+        function addTask(){
+            const input = document.getElementById("input");
+            console.log(input.valeu);
+
+        }
+     </script>
+
+        <!-- html -->
+    <div class="container">
+        <div class="columns ">
+            <div class="column is-half is-offset-one-quartered ">
+                <h1 class="title is-1 has-text-centered has-background-info-light mt-4">My todo app </h1>
+
+                <div class="cards mb-5">
+    
+                    <div class="card ">
+                        <div class="card-content">
+                          <div class="content">
+                            My todo list #1
+                          </div>
+                          <div class="card-content-icons">
+                            <span class="material-symbols-outlined">
+                                stylus
+                                </span>
+
+                              <span class="material-symbols-outlined">
+                                delete
+                                </span>
+                          </div>
+                          
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                              My todo list #2
+                            </div>
+                            <div class="card-content-icons">
+                                <span class="material-symbols-outlined">
+                                    stylus
+                                    </span>
+
+                                <span class="material-symbols-outlined">
+                                delete
+                                </span>              
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                              My todo list #3
+                              
+                            </div>
+                            <div class="card-content-icons">
+                                <span class="material-symbols-outlined">
+                                    stylus
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    delete
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                              My todo list #4
+                            </div>
+                            <div class="card-content-icons">
+                                <span class="material-symbols-outlined">
+                                    stylus
+                                    </span>
+    
+                                <span class="material-symbols-outlined">
+                                    delete
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                              My todo list #5
+                            </div>
+                            <div class="card-content-icons">
+                                <span class="material-symbols-outlined">
+                                    stylus
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    delete
+                                    </span>
+                            </div>
+                        </div>
+                          <div class="card-content">
+                            <div class="content">
+                              My todo list #6
+                            </div>
+                            <div class="card-content-icons">
+                                <span class="material-symbols-outlined">
+                                    stylus
+                                    </span>
+                                <span class="material-symbols-outlined">
+                                    delete
+                                    </span>
+                            </div>
+                          </div>
+                          <input class="input mb-5" type="text" placeholder="Text input">
+                    </div>
+    
+                </div>
+                
+                <input onclick="addTask()" class="button has-background-info-light  is-justify-content-center" type="submit" value="Submit input" />
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
