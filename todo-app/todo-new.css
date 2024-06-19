@@ -12,7 +12,6 @@ body{
 .card-content{
     display: flex;
     justify-content: space-between;
-
 }
 
 .card-content-icons{
