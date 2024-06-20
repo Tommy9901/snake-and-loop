@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+</head>
+<body>
+    <main>
+        <input id="deviceType_input" placeholder="Enter device type..."/>
+        <input id="model_input" placeholder="Enter model type..."/>
+        <button onclick="run()">solve</button>
+        <pre>
+              <code id="output"></code>
+          </pre>
+    </main>
+    <script>
+        
+        
+        
+        // Даалгавар 2
+        // Гараас deviceType болон model гэсэн 2 хувьсагчид утга авах бөгөөд гараас авсан утга:
+        // phone / tablet / laptop байхаас шалтгаалж тохирох утгыг буцааж харуулна уу.
+        
+        
+        
+        function run(){
+            const deviceType = getValueFrominput("deviceType_input");
+            const model = getValueFrominput("model_input");
+            const sum = sumOfNumbers(deviceType, model);
+            printOutput(sum);
+        }
+        // n-ees m hurtelh toonuudiin tegsh toonii niilberiig ol?
+        // 1st
+        function sumOfNumbers(deviceType, model) {
+            // const deviceType = prompt("Enter device type?")
+            // const model = prompt("Enter model type?")
+           
+
+            switch(deviceType){
+            case "mobile": 
+                switch(model){
+                case "iPhone":
+                    return("Apple iphone: IOS device.")
+                    break;
+                case "Samsung":
+                return ("Samsung Galaxy: Android device.")
+                    break;
+                default: return("Unknown phone model.")
+                break;
+            }
+                    
+            case "tablet": 
+                switch(model){
+                case "iPad":
+                    return("Apple ipad: IOS device.")
+                    break;
+                case "Galaxy Tab":
+                    return("Samsung Galaxy Tab: Android device.")
+                    break;
+                default: return("Unknown tablet model.")
+                break;
+            }
+                            
+            case "laptop": 
+                switch(model){
+                case "MacBook":
+                    return("Apple MacBook: macOS device.")
+                    break;
+                case "Dell":
+                    return("Dell XPS: Windows device.")
+                    break;
+                default: return("Unknown laptop model.")
+                break;
+            }
+                                    
+            default: return("Unknown device type.")
+            break;
+            }
+        }
+        
+        function getValueFrominput(inputId){
+            const inputString = document.getElementById(inputId).value;
+            return inputString;
+        }
+        
+        
+        
+        function printOutput(output){
+            document.getElementById("output").innerText = output;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // const deviceType = prompt("Enter device type?")
+        // const model = prompt("Enter model type?")
+        
+        // switch(deviceType){
+        //     case "mobile": 
+        //         switch(model){
+        //         case "iPhone":
+        //             alert("Apple iphone: IOS device.")
+        //             break;
+        //         case "Samsung":
+        //         alert("Samsung Galaxy: Android device.")
+        //             break;
+        //         default: alert("Unknown phone model.")
+        //         break;
+        //     }
+                    
+        //     case "tablet": 
+        //         switch(model){
+        //         case "iPad":
+        //             alert("Apple ipad: IOS device.")
+        //             break;
+        //         case "Galaxy Tab":
+        //             alert("Samsung Galaxy Tab: Android device.")
+        //             break;
+        //         default: alert("Unknown tablet model.")
+        //     }
+                            
+        //     case "laptop": 
+        //         switch(model){
+        //         case "MacBook":
+        //             alert("Apple MacBook: macOS device.")
+        //             break;
+        //         case "Dell":
+        //             alert("Dell XPS: Windows device.")
+        //             break;
+        //         default: alert("Unknown laptop model.")
+        //     }
+                                    
+        //     default: alert("Unknown device type.")
+        //     break;
+        // }
+        //         if else statement
+        // Даалгавар 1
+        // Гараас жимсний нэр авах бөгөөд гараас авсан утга:
+        // "apple" байвал "Apples are red or green." 
+        // "banana" байвал "Bananas are yellow." 
+        // "orange" байвал "Oranges are orange." 
+        // бусад тохиолдолд "unknown fruit." гэсэн үр дүнг буцаана уу.
+                                
+                                
+        // const friuts = prompt("");
+                                
+        // if ( friuts === "apple" ){
+        //  console.log("apples red or green")
+        // }
+        // else if (friuts === "banana"){
+        //     console.log("bananas are yellow")
+        // }
+        // else if(friuts === "orange"){
+        //     console.log("oranges are orange")}
+                                
+        // else{console.log("unknown")}
+                                
+                                
+                                
+        // switch (friuts){
+        //     case "apple":
+        //         console.log("apples are red or green")
+        //         break;
+        //         case "banana":
+        //         console.log("bananas are yellow")
+        //         break;
+        //         case "orange":
+        //         console.log("oranges are orange")
+        //         break;
+        //         default:
+                                //             console.log("unknown")
+                                // }                        
+        </script>
+</body>
+</html>
