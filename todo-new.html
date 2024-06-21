@@ -33,17 +33,50 @@
         <div class="columns ">
             <div class="column is-half is-offset-one-quartered ">
                 <h1 class="title is-1 has-text-centered has-background-info-light mt-4">My todo app </h1>
-                <input class="input" type="text" placeholder="Text input" />
+                <div id="tasks"></div>
+                <input class="input mt-6" type="text" placeholder="Text input" />
                 <div class="buttons mt-6 is-justify-content-center">
                     <button class="button is-info is-outlined">add tasks</button>
                 </div>
-                <div id="tasks"></div>
             </div>
         </div>
     </div>
     <script>
-        const tasks = ["list #1", "list #2", "list #3", "list #4"]
 
+        // array
+        const object = {name: "list #1", status: "todo"}
+        const tasks = [
+             {name: "list #1", status: "todo"}, 
+             {name: "list #2", status: "todo"},
+             {name: "list #3", status: "todo"}, 
+             {name: "list #4", status: "todo"},
+        ]
+
+        // addTask
+        function addTask(position){
+            const input = document.getElementById("input");
+            console.log(input.valeu);
+
+
+        }
+
+        // check box 
+        function checkBoxTask(position){
+            const oldValue = tasks[position].status;
+            const newValue = "done";
+            const checked = "todo";
+            if (oldValue == "done"){
+                tasks[position].status = checked;
+            }
+            else{
+                tasks[position].status = "done";    
+            }
+            
+            
+            render();
+        }
+
+        // delete button
         function deleteTask(position){
             if(confirm("Are you sure?")){
                 // delete one task form array
@@ -52,12 +85,18 @@
             }
         }
 
+        // edit button 
         function editTask(position){
-            
+            const oldValue = tasks[position].name;
+            const newValue = prompt("Edit task", oldValue);
+            if(newValue !== null){
+                tasks[position].name = newValue;
+            }
 
             render();
         }
 
+        // render 
         function render(){
             let tasksHTML = "";
     
@@ -66,10 +105,14 @@
                                 <div class="card">
                                     <div class="card-content">
                                         <div class="is-flex is-align-items-center is-justify-content-space-between" >
-                                            <div>${tasks[i]}</div>
+                                            <div class=" is-flex ">
+                                            <input type="checkbox" onclick="checkBoxTask(${i})" ${tasks[i].status === "done" ? "checked" : ""}/>
+                                            ${tasks[i].status == "done" ? `<s>${tasks[i].name}</s>` : tasks[i].name }
+                                            
+                                            </div>
                                             <div class="card-content-buttons">
                                                 <button class="button is-small is-danger is-outline" onclick="deleteTask(${i});">delete</button>
-                                                <button class="button is-small">edit</button>                         
+                                                <button class="button is-small" onclick="editTask(${i})" >edit</button>                         
                                             </div>
                                         </div>
                                     </div>
